@@ -32,7 +32,7 @@ module.exports.run = async function ({
                 uid = event.messageReply.senderID
                 return api.removeUserFromGroup(uid, event.threadID)
             } else {
-                if (!args[0]) return api.sendMessage(`Vui lòng tag hoặc reply người cần kick`, event.threadID, event.messageID)
+                if (!args[0]) return api.sendMessage(`Biết sài không?`, event.threadID, event.messageID)
                 else {
                     if (args[0] == "all") {
                         const listUserID = event.participantIDs.filter(ID => ID != botID && ID != event.senderID);
